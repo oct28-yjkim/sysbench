@@ -1,0 +1,54 @@
+{
+  "sharded": true,
+  "vindexes": {
+    "hash": {
+      "type": "hash"
+    }
+  },
+  "tables": {
+    "sbtest1": {
+      "column_vindexes": [
+        {
+          "column": "id",
+          "name": "hash"
+        }
+      ],
+      "auto_increment": {
+        "column": "id",
+        "sequence": "sbtest1_seq"
+      },
+      "columns": [
+        {
+          "name": "c",
+          "type": "CHAR"
+        },
+        {
+          "name": "pad",
+          "type": "CHAR"
+        }
+      ]
+    },
+    "sbtest2": {
+      "column_vindexes": [
+        {
+          "column": "id",
+          "name": "hash"
+        }
+      ],
+      "auto_increment": {
+        "column": "id",
+        "sequence": "sbtest2_seq"
+      },
+      "columns": [
+        {
+          "name": "c",
+          "type": "CHAR"
+        },
+        {
+          "name": "pad",
+          "type": "CHAR"
+        }
+      ]
+    }
+  }
+}
